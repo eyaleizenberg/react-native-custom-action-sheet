@@ -1,0 +1,25 @@
+{
+  "name": "react-native-custom-action-sheet",
+  "version": "0.0.3",
+  "description": "iOS custom sheet with fade in/out overlay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eyaleizenberg/react-native-custom-action-sheet.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios",
+    "action sheet"
+  ],
+  "author": "Eyal Eizenberg <eyal.eizenberg@samanage.com> (https://github.com/eyaleizenberg)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eyaleizenberg/react-native-custom-action-sheet/issues"
+  },
+  "homepage": "https://github.com/eyaleizenberg/react-native-custom-action-sheet"
+}
