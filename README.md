@@ -35,4 +35,8 @@ var SomeComponent = React.createClass({
 - `onCancel` (Function) - Function to run when the cancel button has been pressed.
 
 ### Questions/Bugs/Ideas?
-Feel free to open an issue on github or contact me at eyal.eizenberg@samanage.com
+Feel free to open an issue on github, send suggestions, fork this repository or contact me at eyal.eizenberg@samanage.com
+
+This package was developed during my work at [Samanage](http://www.samanage.com/).
+
+Thanks and Enjoy! :)
