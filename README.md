@@ -33,3 +33,6 @@ var SomeComponent = React.createClass({
 ### Component props
 - `modalVisible` (Boolean) - Decide if the component should be visible or not.
 - `onCancel` (Function) - Function to run when the cancel button has been pressed.
+
+### Questions/Bugs/Ideas?
+Feel free to open an issue on github or contact me at eyal.eizenberg@samanage.com
