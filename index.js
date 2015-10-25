@@ -4,7 +4,7 @@ var React = require('react-native');
 var Button = require('./button');
 var FadeInView = require('./fade_in_view');
 var window = require('Dimensions').get('window');
-var { Animated, Modal, StyleSheet, TouchableOpacity, View} = React;
+var { Modal, StyleSheet, TouchableOpacity, View} = React;
 
 var ActionModal = React.createClass({
   render: function() {
@@ -15,6 +15,7 @@ var ActionModal = React.createClass({
           transparent={true}
           visible={this.props.modalVisible}>
           <View style={styles.modalContainer}>
+            <TouchableOpacity style={styles.container} onPress={this.props.onCancel}></TouchableOpacity>
             {this.props.children}
             <Button onPress={this.props.onCancel} text={"Cancel"} />
           </View>
@@ -25,9 +26,13 @@ var ActionModal = React.createClass({
 });
 
 var styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
   modalContainer: {
     flex: 1,
-    padding: 5,
+    padding: 8,
+    paddingBottom: 0,
     justifyContent: "flex-end"
   }
 });
