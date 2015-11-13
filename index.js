@@ -3,7 +3,6 @@
 var React = require('react-native');
 var Button = require('./button');
 var FadeInView = require('./fade_in_view');
-var window = require('Dimensions').get('window');
 var { Modal, StyleSheet, TouchableOpacity, View} = React;
 
 var ActionModal = React.createClass({
