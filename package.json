@@ -1,6 +1,6 @@
 {
   "name": "react-native-custom-action-sheet",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "iOS custom sheet with fade in/out overlay",
   "main": "index.js",
   "scripts": {
