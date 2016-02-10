@@ -16,7 +16,7 @@ var ActionModal = React.createClass({
           <View style={styles.modalContainer}>
             <TouchableOpacity style={styles.container} onPress={this.props.onCancel}></TouchableOpacity>
             {this.props.children}
-            <Button onPress={this.props.onCancel} text={"Cancel"} />
+            <Button onPress={this.props.onCancel} text={this.props.buttonText || "Cancel"} />
           </View>
         </Modal>
       </FadeInView>
