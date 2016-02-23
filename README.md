@@ -33,7 +33,7 @@ var SomeComponent = React.createClass({
 ### Component props
 - `modalVisible` (Boolean) - Decide if the component should be visible or not.
 - `onCancel` (Function) - Function to run when the cancel button/background has been pressed.
-
+- `buttonText` (String) - The text of the onCancel button. Defaults to Cancel.
 ### Questions/Bugs/Ideas?
 Feel free to open an issue on github, send suggestions, fork this repository or contact me at eyal.eizenberg@samanage.com
 
