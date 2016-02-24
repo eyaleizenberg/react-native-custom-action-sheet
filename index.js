@@ -8,7 +8,7 @@ var { Modal, StyleSheet, TouchableOpacity, View} = React;
 var ActionModal = React.createClass({
   render: function() {
     return (
-      <FadeInView visible={this.props.modalVisible}>
+      <FadeInView visible={this.props.modalVisible} backgroundColor={this.props.backgroundColor}>
         <Modal
           animated={true}
           transparent={true}
