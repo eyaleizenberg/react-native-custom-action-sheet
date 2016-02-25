@@ -34,6 +34,7 @@ var SomeComponent = React.createClass({
 - `modalVisible` (Boolean) - Decide if the component should be visible or not.
 - `onCancel` (Function) - Function to run when the cancel button/background has been pressed.
 - `buttonText` (String) - The text of the onCancel button. Defaults to Cancel.
+- `backgroundColor` (String) - The color of the fade-in effect background. Defaults to 'black'.
 
 
 ### Questions/Bugs/Ideas?
