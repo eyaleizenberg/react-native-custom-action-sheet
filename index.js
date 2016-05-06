@@ -12,7 +12,8 @@ var ActionModal = React.createClass({
         <Modal
           animated={true}
           transparent={true}
-          visible={this.props.modalVisible}>
+          visible={this.props.modalVisible}
+          onRequestClose={this.props.onCancel}}>
           <View style={styles.modalContainer}>
             <TouchableOpacity style={styles.container} onPress={this.props.onCancel}></TouchableOpacity>
             {this.props.children}
