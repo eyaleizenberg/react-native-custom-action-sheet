@@ -1,7 +1,7 @@
 'use strict'
 
-var React = require('react-native');
-var { StyleSheet, Text, TouchableOpacity, View } = React;
+var React = require('react');
+var { StyleSheet, Text, TouchableOpacity, View } = require('react-native');
 
 var Button = React.createClass({
   render: function() {
