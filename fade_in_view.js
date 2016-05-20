@@ -12,13 +12,21 @@ var FadeInView = React.createClass({
     };
   },
 
+  componentDidMount() {
+    this._animate(this.props);
+  },
+
   componentWillReceiveProps: function(newProps) {
+    this._animate(newProps);
+  },
+
+  _animate(newProps){
     return Animated.timing(this.state.fadeAnim, {
       toValue: newProps.visible ? 0.7 : 0,
       duration: 300
     }).start();
   },
-
+  
   render: function() {
     return (
       <Animated.View style={[styles.overlay,
