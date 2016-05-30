@@ -11,7 +11,7 @@ var ActionModal = React.createClass({
     return (
       <FadeInView visible={this.props.modalVisible} backgroundColor={this.props.backgroundColor}>
         <Modal
-          animated={true}
+          animationType="slide"
           transparent={true}
           visible={this.props.modalVisible}
           onRequestClose={this.props.onCancel}>
