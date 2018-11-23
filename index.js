@@ -1,30 +1,23 @@
-'use strict';
+import React from "react";
+import { Modal, StyleSheet, TouchableOpacity, View } from "react-native";
+import Button from "./button";
+import FadeInView from "./fade_in_view";
 
-var React = require('react');
-var ReactNative = require('react-native');
-var Button = require('./button');
-var FadeInView = require('./fade_in_view');
-var { Modal, StyleSheet, TouchableOpacity, View } = ReactNative;
-
-var ActionModal = React.createClass({
-  render: function() {
-    return (
-      <FadeInView visible={this.props.modalVisible} backgroundColor={this.props.backgroundColor}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={this.props.modalVisible}
-          onRequestClose={this.props.onCancel}>
-          <View style={styles.modalContainer}>
-            <TouchableOpacity style={styles.container} onPress={this.props.onCancel}></TouchableOpacity>
-            {this.props.children}
-            <Button onPress={this.props.onCancel} text={this.props.buttonText || "Cancel"} />
-          </View>
-        </Modal>
-      </FadeInView>
-    );
-  }
-});
+const ActionModal = ({ modalVisible, backgroundColor, buttonText, children, onCancel }) => (
+  <FadeInView visible={modalVisible} backgroundColor={backgroundColor}>
+    <Modal
+      animationType="slide"
+      transparent={true}
+      visible={modalVisible}
+      onRequestClose={onCancel}>
+      <View style={styles.modalContainer}>
+        <TouchableOpacity style={styles.container} onPress={onCancel}></TouchableOpacity>
+        {children}
+        <Button onPress={onCancel} text={buttonText || "Cancel"} />
+      </View>
+    </Modal>
+  </FadeInView>
+);
 
 var styles = StyleSheet.create({
   container: {
@@ -38,4 +31,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = ActionModal;
+export default ActionModal;
