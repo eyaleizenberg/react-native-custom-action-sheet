@@ -25,8 +25,6 @@ var styles = StyleSheet.create({
   },
   modalContainer: {
     flex: 1,
-    padding: 8,
-    paddingBottom: 0,
     justifyContent: "flex-end"
   }
 });
