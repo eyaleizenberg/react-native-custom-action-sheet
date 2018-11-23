@@ -48,7 +48,8 @@ var styles = StyleSheet.create({
     right: 0,
     height: window.height,
     width: window.width,
-    position: 'absolute'
+    position: 'absolute',
+    zIndex: 99
   }
 });
 
