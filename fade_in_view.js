@@ -1,43 +1,44 @@
-'use strict';
+import React, { Component } from "react";
+import {Animated, Dimensions, StyleSheet} from "react-native";
 
-var React = require('react');
-var ReactNative = require('react-native');
-var { Animated, Dimensions, StyleSheet, View } = ReactNative;
-var window = Dimensions.get('window');
+const window = Dimensions.get('window');
 
-var FadeInView = React.createClass({
-  getInitialState: function() {
-    return {
-      fadeAnim: new Animated.Value(0)
-    };
-  },
+class FadeInView extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {fadeAnim: new Animated.Value(0)}
+  }
 
   componentDidMount() {
     this._animate(this.props);
-  },
+  }
 
-  componentWillReceiveProps: function(newProps) {
+  componentWillReceiveProps(newProps) {
     this._animate(newProps);
-  },
+  }
 
   _animate(newProps){
     return Animated.timing(this.state.fadeAnim, {
       toValue: newProps.visible ? 0.7 : 0,
       duration: 300
     }).start();
-  },
-  
-  render: function() {
+  }
+
+  render() {
+    const {fadeAnim} = this.state;
+    const { backgroundColor, children } = this.props;
+
     return (
       <Animated.View style={[styles.overlay,
-          {opacity: this.state.fadeAnim},
-          {backgroundColor: this.props.backgroundColor || 'black' }
+          {opacity: fadeAnim},
+          {backgroundColor: backgroundColor || 'black' }
         ]}>
-        {this.props.children}
+        {children}
       </Animated.View>
     );
   }
-});
+}
 
 var styles = StyleSheet.create({
   overlay: {
@@ -51,4 +52,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = FadeInView;
+export default FadeInView;
