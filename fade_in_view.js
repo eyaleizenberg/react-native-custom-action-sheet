@@ -26,17 +26,17 @@ class FadeInView extends Component {
   }
 
   render() {
-    const {fadeAnim} = this.state;
-    const { backgroundColor, children } = this.props;
+    const { fadeAnim } = this.state;
+    const { backgroundColor, children, visible } = this.props;
 
-    return (
+    return visible ? (
       <Animated.View style={[styles.overlay,
           {opacity: fadeAnim},
           {backgroundColor: backgroundColor || 'black' }
         ]}>
         {children}
       </Animated.View>
-    );
+    ) : null;
   }
 }
 
