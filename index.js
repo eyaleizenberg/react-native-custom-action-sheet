@@ -3,7 +3,7 @@ import { Modal, StyleSheet, TouchableOpacity, View } from "react-native";
 import Button from "./button";
 import FadeInView from "./fade_in_view";
 
-const ActionModal = ({ modalVisible, backgroundColor, buttonText, children, onCancel }) => (
+const ActionModal = ({ modalVisible, backgroundColor, buttonText, children, onCancel, cancelButton }) => (
   <FadeInView visible={modalVisible} backgroundColor={backgroundColor}>
     <Modal
       animationType="slide"
@@ -13,7 +13,7 @@ const ActionModal = ({ modalVisible, backgroundColor, buttonText, children, onCa
       <View style={styles.modalContainer}>
         <TouchableOpacity style={styles.container} onPress={onCancel}></TouchableOpacity>
         {children}
-        <Button onPress={onCancel} text={buttonText || "Cancel"} />
+        {cancelButton && <Button onPress={onCancel} text={buttonText || "Cancel"} />}
       </View>
     </Modal>
   </FadeInView>
