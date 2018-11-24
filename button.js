@@ -1,20 +1,13 @@
-'use strict'
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-var React = require('react');
-var ReactNative = require('react-native');
-var { StyleSheet, Text, TouchableOpacity, View } = ReactNative;
-
-var Button = React.createClass({
-  render: function() {
-    return (
-      <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
-        <Text style={styles.buttonText}>
-          {this.props.text}
-        </Text>
-      </TouchableOpacity>
-    );
-  }
-});
+const Button = ({ text, onPress }) => (
+  <TouchableOpacity style={styles.button} onPress={onPress}>
+    <Text style={styles.buttonText}>
+      {text}
+    </Text>
+  </TouchableOpacity>
+);
 
 var styles = StyleSheet.create({
   buttonText: {
@@ -34,4 +27,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = Button
+export default Button;
